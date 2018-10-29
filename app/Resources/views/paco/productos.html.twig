@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <strong>PRODUCTOS</strong>
+    <ul id="navigation">
+    {% for producto in productos %}
+        <li><a href="{{path('producto',{'id':producto.id})}}">{{producto.nombre}}, {{producto.descripcion}}</a></li>
+    {% endfor %}
+</ul>
+  </body>
+</html>
